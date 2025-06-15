@@ -8,7 +8,7 @@ export const AppContext = createContext();
 export const AppContextProvider = (props) => {
     const navigate = useNavigate();
 
-    const [serverUrl] = useState(`http://localhost:8000`);
+    const [serverUrl] = useState(`https://airbnb-backend-s4mq.onrender.com`);
     const [userData, setUserData] = useState(null);
 
     // Listing states
