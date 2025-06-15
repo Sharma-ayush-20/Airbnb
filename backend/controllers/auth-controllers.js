@@ -20,8 +20,8 @@ const signup = async (request, response) => {
         //cookie me store karo
         response.cookie("Token", token, {
             httpOnly: true,
-            secure: process.env.NODE_ENVIRONMENT === "production",
-            sameSite: "strict",
+            secure: true,
+            sameSite: "none",
             maxAge: 7 * 24 * 60 * 60 * 1000
         })
 
@@ -62,8 +62,8 @@ const login = async (request, response) => {
         //cookie me store karo
         response.cookie("Token", token, {
             httpOnly: true,
-            secure: process.env.NODE_ENVIRONMENT === "production",
-            sameSite: "strict",
+            secure: true,
+            sameSite: "none",
             maxAge: 7 * 24 * 60 * 60 * 1000
         })
 
